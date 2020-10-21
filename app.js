@@ -41,3 +41,7 @@ function createTeam() {
       employeeArray.push(manager);
       createMoreMembers();
     });
+  }
+  createManager();
+}
+createTeam();
