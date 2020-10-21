@@ -41,6 +41,23 @@ function createTeam() {
       employeeArray.push(manager);
       createMoreMembers();
     });
+    
+    function createMoreMembers() {
+      inquirer.prompt([
+        {
+          type: "list",
+          name: "create",
+          message: "Would you like to add more team members?",
+          choices: ["Yes", "No"]
+        }
+      ]).then(function (answers) {
+        if (answers.create === true) {
+          createMembers()
+        } else {
+          //
+        }
+      });
+    }
   }
   createManager();
 }
